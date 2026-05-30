@@ -54,6 +54,7 @@ export const DataProvider = ({ children }) => {
       }
       parsed.skills = DEFAULT_SKILLS;
       parsed.experience = experienceData;
+      parsed.profile = { ...parsed.profile, ...profileData };
       return parsed;
     }
     return {

@@ -13,7 +13,7 @@ const Footer = () => {
   const socialLinks = [
     { id: 'github', icon: <FiGithub />, url: profile.github, label: 'GitHub' },
     { id: 'linkedin', icon: <FiLinkedin />, url: profile.linkedin, label: 'LinkedIn' },
-    { id: 'instagram', icon: <FiInstagram />, url: profile.instagram || '#', label: 'Instagram' },
+    { id: 'instagram', icon: <FiInstagram />, url: 'https://www.instagram.com/_.bala8._', label: 'Instagram' },
     { id: 'mail', icon: <FiMail />, url: `mailto:${profile.email}`, label: 'Mail' }
   ];
 
