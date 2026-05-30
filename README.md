@@ -1,16 +1,118 @@
-# React + Vite
+# Balaji Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern developer portfolio built to showcase projects, technical skills, education, certifications, and professional experience.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This portfolio highlights:
 
-## React Compiler
+* Professional profile and developer branding
+* Technical expertise and skills
+* Featured projects and case studies
+* Education and certifications
+* Resume and contact information
+* Responsive design across all devices
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+* Modern developer-themed UI
+* Fully responsive design
+* Interactive project showcase
+* Project detail modals
+* Certifications section
+* Resume preview and download
+* Contact form integration
+* Optimized for desktop, tablet, and mobile devices
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+### Frontend
+
+* React.js
+* Vite
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+
+### UI & Animation
+
+* Framer Motion
+* Responsive CSS
+* Custom Animations
+
+### Deployment
+
+* GitHub
+* Vercel
+
+## Project Structure
+
+```text
+src/
+├── assets/
+├── components/
+├── data/
+├── pages/
+├── styles/
+├── App.jsx
+└── main.jsx
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Balajip13/portfolio-balaji.git
+```
+
+Navigate into the project:
+
+```bash
+cd portfolio-balaji
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+## Live Portfolio
+
+
+https://balaji-portfolio.vercel.app
+
+
+## Contact
+
+LinkedIn:
+https://linkedin.com/in/balaji-p1
+
+GitHub:
+https://github.com/Balajip13
+
+Email:
+[balajics1382@gmail.com](mailto:balajics1382@gmail.com)
+
+## License
+
+This project is intended for portfolio and professional showcase purposes.
