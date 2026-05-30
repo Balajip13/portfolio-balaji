@@ -96,10 +96,26 @@
   margin-bottom: 3.5rem;
 }
 
-.btn-modern-hire, 
+.btn-modern-hire {
+  background: var(--accent-cyan);
+  color: #0b0d14;
+  padding: 0.9rem 2.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border: 1.5px solid var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
 .btn-modern-resume {
-  background: rgba(13, 17, 23, 0.4);
-  backdrop-filter: blur(10px);
+  background: transparent;
   color: #fff;
   padding: 0.9rem 2.2rem;
   border-radius: 8px;
@@ -108,23 +124,26 @@
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  border: 1.5px solid rgba(255, 255, 255, 0.6); /* Brighter, premium white border */
+  border: 1.5px solid var(--accent-cyan);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
-.btn-modern-hire {
-  border-color: rgba(255, 255, 255, 0.85); /* Stronger primary border */
+.btn-modern-hire:hover {
+  background: #33e5ff;
+  border-color: #33e5ff;
+  color: #0b0d14;
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.6);
+  transform: translateY(-4px);
 }
 
-.btn-modern-hire:hover,
 .btn-modern-resume:hover {
+  background: rgba(0, 217, 255, 0.1);
+  color: #fff;
   border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
-  background: rgba(0, 217, 255, 0.05);
-  box-shadow: 0 0 25px rgba(0, 217, 255, 0.3),
-              inset 0 0 15px rgba(0, 217, 255, 0.15);
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
   transform: translateY(-4px);
 }
 
