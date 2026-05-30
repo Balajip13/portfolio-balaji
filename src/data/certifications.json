@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Advanced Diploma in Java Programming (ADJP)",
+    "issuer": "CSC Computer Education (P) Ltd.",
+    "year": "2021",
+    "certificateUrl": "/assets/ADJP Certificate - CSC BALAJI P.pdf"
+  },
+  {
+    "id": 2,
+    "title": "Advanced Diploma in Python Programming (ADPP)",
+    "issuer": "CSC Computer Education (P) Ltd.",
+    "year": "2021",
+    "certificateUrl": "/assets/ADPP Certificate-  CSC BALAJI P.pdf"
+  }
+]

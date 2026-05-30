@@ -1,0 +1,227 @@
+.about-redesign {
+  padding: 80px 0;
+  background: var(--bg-black);
+  position: relative;
+}
+
+.about-unified-container {
+  background: rgba(13, 17, 23, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6),
+              0 0 15px rgba(0, 217, 255, 0.1);
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-split-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+/* === Left Column: Content (62%) === */
+.about-content-left {
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Terminal Title Style --- */
+.about-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.terminal-icon-box {
+  width: 42px;
+  height: 42px;
+  background: rgba(0, 217, 255, 0.03);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.1);
+  font-size: 1.2rem;
+}
+
+.about-main-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+/* --- README Badge Style --- */
+.readme-header {
+  margin-bottom: 1.5rem;
+}
+
+.readme-badge-compact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: var(--accent-cyan);
+}
+
+.readme-icon {
+  font-size: 0.9rem;
+}
+
+.readme-label {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+/* --- Content Typography --- */
+.readme-title {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.readme-title span {
+  color: var(--accent-cyan);
+  margin-right: 8px;
+}
+
+.about-p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+.about-vertical-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.section-h3 {
+  font-size: 0.85rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.section-h3 span {
+  color: var(--accent-cyan);
+  margin-right: 8px;
+}
+
+.about-ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.about-ul li {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.about-ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-cyan);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* === Right Column: Image (38%) === */
+.about-visual-right {
+  width: 38%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-image-card {
+  width: 350px;
+  height: 460px;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 217, 255, 0.25);
+  box-shadow: 0 0 40px rgba(0, 217, 255, 0.15);
+}
+
+.about-img-premium {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-premium-glow {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .about-split-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 3rem;
+  }
+
+  .about-content-left, .about-visual-right {
+    width: 100%;
+  }
+
+  .about-visual-right {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-unified-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .about-image-card {
+    width: 100%;
+    max-width: 320px;
+    height: 380px;
+  }
+
+  .about-main-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-image-card {
+    max-width: 260px;
+    width: 100%;
+    height: 320px;
+  }
+
+  .about-p {
+    font-size: 0.85rem;
+  }
+}

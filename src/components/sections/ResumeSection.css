@@ -1,0 +1,318 @@
+/* =============================================
+   RESUME SECTION
+   ============================================= */
+.resume-section {
+  background: var(--bg-secondary);
+  padding: 80px 0;
+  position: relative;
+}
+
+/* === Title === */
+.resume-title {
+  font-size: 3.2rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  margin-bottom: 2rem !important;
+  text-align: left !important;
+  letter-spacing: -1.5px !important;
+  text-shadow: 0 0 30px rgba(0, 217, 255, 0.1) !important;
+  border-left: none !important;
+  padding-left: 0 !important;
+  grid-column: 1 / -1;
+}
+
+/* === Split Layout === */
+.resume-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =============================================
+   LEFT SIDE - PREVIEW CARD
+   ============================================= */
+.resume-preview-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.resume-glass-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(10, 14, 20, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 217, 255, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 217, 255, 0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-glass-card:hover {
+  border-color: rgba(0, 217, 255, 0.35);
+  box-shadow: 0 15px 50px rgba(0, 217, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.resume-build-effect {
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  font-size: 0.8rem;
+  color: var(--accent-cyan);
+  opacity: 0.08;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.resume-build-effect .fade-delay-1 { animation: build-fade 8s infinite; animation-delay: 1s; opacity: 0; }
+.resume-build-effect .fade-delay-2 { animation: build-fade 8s infinite; animation-delay: 2s; opacity: 0; }
+.resume-build-effect .fade-delay-3 { animation: build-fade 8s infinite; animation-delay: 3s; opacity: 0; }
+
+@keyframes build-fade {
+  0% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.resume-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pdf-icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--accent-cyan);
+  font-size: 1.5rem;
+}
+
+.pdf-filename {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.page-count {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+}
+
+/* Document wireframe preview */
+.doc-preview-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.doc-line {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.doc-line.title { width: 40%; height: 10px; background: rgba(0, 217, 255, 0.3); margin-bottom: 0.5rem; }
+.doc-line.full { width: 100%; }
+.doc-line.med { width: 85%; }
+.doc-line.short { width: 60%; }
+
+.resume-description {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* =============================================
+   RIGHT SIDE - ACTIONS
+   ============================================= */
+.resume-actions-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.resume-action-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.resume-action-text span {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+/* === Metadata Grid === */
+.resume-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.meta-item:hover {
+  transform: translateX(4px);
+}
+
+.meta-indicator {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.6), 0 0 15px rgba(0, 217, 255, 0.4);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.meta-item:hover .meta-indicator {
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.8), 0 0 20px rgba(0, 217, 255, 0.6);
+  transform: scale(1.2);
+}
+
+.meta-text {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.resume-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap; /* Forces them side-by-side */
+}
+
+.resume-btn {
+  background: linear-gradient(135deg, var(--accent-cyan), #00a8cc);
+  color: #000000;
+  border: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  height: 52px; /* Fixed height for consistency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  font-family: inherit;
+  flex: 1; /* Make both buttons equal width */
+}
+
+.resume-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 217, 255, 0.4);
+  filter: brightness(1.1);
+}
+
+.resume-btn.secondary {
+  background: transparent;
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
+}
+
+.resume-btn.secondary:hover {
+  background: rgba(0, 217, 255, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 217, 255, 0.2);
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 900px) {
+  .resume-split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .resume-actions-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .resume-preview-container {
+    justify-content: center;
+  }
+
+  .resume-title {
+    font-size: 3rem !important;
+    text-align: center !important;
+  }
+
+
+
+  .resume-buttons {
+    width: 100%;
+  }
+
+  .resume-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-section {
+    padding: 60px 0;
+  }
+
+  .resume-title {
+    font-size: 2rem !important;
+    letter-spacing: -0.5px !important;
+  }
+
+  .resume-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .resume-glass-card {
+    padding: 1.5rem;
+  }
+
+  .resume-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .resume-btn {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .resume-action-text {
+    font-size: 0.95rem;
+  }
+}

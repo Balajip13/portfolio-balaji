@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "company": "Xoon Infotech Pvt Ltd",
+    "role": "Full Stack Developer Trainee",
+    "duration": "May 2025 – March 2026",
+    "bullets": [
+      "Developed responsive, user-focused frontend components using React and modern web technologies to optimize load times.",
+      "Built and integrated scalable backend APIs and databases using Node.js, Express, and MongoDB.",
+      "Collaborated closely on real-world software development workflows, UI design implementations, and secure database integrations."
+    ]
+  }
+]

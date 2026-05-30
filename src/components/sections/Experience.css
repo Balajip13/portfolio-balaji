@@ -1,0 +1,304 @@
+.experience-redesign {
+  background: var(--bg-black);
+  padding: 100px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.compact-experience-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.experience-title-modern {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 3.5rem;
+  text-align: left;
+  letter-spacing: -1.5px;
+  text-shadow: 0 0 30px rgba(0, 217, 255, 0.1); /* Subtle cyan glow */
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Cards will be connected by the timeline line */
+  padding-left: 0;
+}
+
+.experience-card-modern {
+  display: block;
+  position: relative;
+  margin-bottom: 3rem;
+  /* Timeline rail is positioned relative to this wrapper */
+}
+
+.timeline-rail {
+  position: absolute;
+  top: 2.5rem;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  width: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+  margin: 0;
+  /* Ensure rail does not bleed outside the card */
+  overflow: hidden;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--accent-cyan), 0 0 24px rgba(0, 217, 255, 0.3);
+  flex-shrink: 0;
+  margin-top: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-line {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-cyan), rgba(0, 217, 255, 0.0));
+  margin-top: 6px;
+  z-index: 1;
+  /* Hard stop — line ends exactly where rail ends */
+  max-height: calc(100% - 20px);
+}
+
+/* === Card Content === */
+.experience-card-content {
+  background: rgba(8, 12, 25, 0.75); /* Requested background */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 2.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 22% 1fr;
+  gap: 1.5rem;
+  align-items: flex-start;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 0;
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.05);
+}
+
+.experience-bg-logs {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0.04;
+  font-size: 0.8rem;
+  color: var(--accent-cyan, #00d9ff);
+  z-index: 0;
+  pointer-events: none;
+  text-align: right;
+  animation: exp-logs-fade 8s infinite alternate;
+}
+
+@keyframes exp-logs-fade {
+  0% { opacity: 0.02; }
+  100% { opacity: 0.06; }
+}
+
+.exp-left-side {
+  padding-left: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.exp-center-content {
+  margin-top: -6px;
+  position: relative;
+  z-index: 1;
+}
+
+.experience-card-content:hover {
+  transform: translateY(-10px) scale(1.01);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4), 
+              0 0 30px rgba(0, 217, 255, 0.12);
+}
+
+/* --- Left Side: Date --- */
+.exp-date {
+  font-size: 0.9rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* --- Center Side: Details --- */
+.exp-role-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.exp-company-name {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.exp-desc-compact {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-dim);
+  max-width: 90%;
+}
+
+/* === Bullet Points === */
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 90%;
+}
+
+.exp-bullet-item {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-dim);
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.exp-bullet-item::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-cyan);
+  font-size: 0.85rem;
+  top: 0.15em;
+}
+
+/* --- Right Side: Chip --- */
+.exp-right-side {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.experience-chip {
+  background: rgba(0, 217, 255, 0.08);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.chip-icon {
+  font-size: 0.9rem;
+}
+
+/* === Responsive Styling === */
+@media (max-width: 1024px) {
+  .experience-card-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .exp-right-side {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-title-modern {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .experience-card-modern {
+    gap: 1.5rem;
+  }
+  
+  .experience-card-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .exp-role-title {
+    font-size: 1.6rem;
+  }
+  
+  .timeline-rail {
+    display: none; /* Hide timeline line on mobile to save space */
+  }
+
+  .exp-left-side {
+    padding-left: 0;
+  }
+
+  .exp-center-content {
+    margin-top: 0;
+  }
+
+  .exp-desc-compact {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-redesign {
+    padding: 60px 0;
+  }
+
+  .experience-title-modern {
+    font-size: 2rem;
+  }
+
+  .experience-card-modern {
+    margin-bottom: 2rem;
+  }
+
+  .experience-card-content {
+    padding: 1.5rem 1.2rem;
+    border-radius: 16px;
+    margin-bottom: 0;
+  }
+
+  .exp-role-title {
+    font-size: 1.3rem;
+  }
+
+  .exp-company-name {
+    font-size: 0.9rem;
+  }
+
+  .exp-desc-compact {
+    font-size: 0.9rem;
+  }
+
+  .experience-timeline {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .experience-card-content {
+    padding: 1.2rem 0.8rem;
+  }
+  .exp-role-title {
+    font-size: 1.15rem;
+  }
+}

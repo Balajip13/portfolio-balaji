@@ -1,0 +1,18 @@
+.floating-icons-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-icon-wrapper {
+  position: absolute;
+  color: var(--accent-cyan);
+  filter: blur(1.5px);
+  will-change: transform, opacity;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}

@@ -1,0 +1,7 @@
+{
+  "frontend": ["HTML", "CSS", "JavaScript", "React.js", "Tailwind CSS"],
+  "backend": ["Node.js", "Express.js", "JWT Authentication"],
+  "database": ["MongoDB", "SQL"],
+  "programming": ["Python", "Java", "C", "C++"],
+  "tools": ["GitHub", "Vercel", "Power BI", "MS Excel", "VS Code"]
+}
